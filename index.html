@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Feliz Cumpleaños, Hermanita!</title>
+  
+  <!-- Estilos Locales -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Canvas para la animación de Confeti -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Navegación -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">Para Sofia "Palpatin" ❤️</div>
+      <div class="nav-links">
+        <a href="#hero">Inicio</a>
+        <a href="#frases">Sobres</a>
+        <a href="#galeria">Familia</a>
+        <a href="#sorpresa">Carta Final</a>
+      </div>
+    </div>
+    <button id="music-btn" onclick="toggleMusic()" class="btn-envelope">
+        🎵 Música: OFF
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="avatar-wrapper">
+      <img src="imagenes/2.jpeg" alt="Foto principal" class="avatar">
+    </div>
+
+    <div class="badge">¡Un día muy especial!</div>
+    <h1 class="hero-title">¡Feliz Cumpleaños, <span>Hija-Hermanita</span>!</h1>
+    <p class="hero-text">
+      He preparado esta pequeña página para recordarte lo especial que eres en mi vida y celebrar nuestros mejores recuerdos juntos.
+    </p>
+
+    <a href="#frases" class="btn-main">Descubrir sorpresas ↓</a>
+  </section>
+
+  <!-- Sección de Sobres Interactivos -->
+  <section id="frases" class="section">
+    <h2 class="section-title">Cartas y Frases Especiales</h2>
+    <p class="section-subtitle">Haz clic en los botones para abrir cada sobre y leer su contenido.</p>
+
+    <div class="envelopes-grid">
+      
+      <!-- Sobre 1 -->
+      <div class="envelope-card">
+        <div class="envelope-wrapper">
+          <div class="envelope" id="envelope-1">
+            <div class="envelope-flap"></div>
+            <div class="letter">
+              <p class="font-handwriting">Un hermano o hermana es un trozo de infancia que nunca se pierde.</p>
+              <span>Gracias por estar siempre</span>
+            </div>
+            <div class="envelope-pocket"></div>
+          </div>
+        </div>
+        <button onclick="toggleEnvelope('envelope-1', this)" class="btn-envelope">Abrir Carta</button>
+      </div>
+
+      <!-- Sobre 2 -->
+      <div class="envelope-card">
+        <div class="envelope-wrapper">
+          <div class="envelope" id="envelope-2">
+            <div class="envelope-flap"></div>
+            <div class="letter">
+              <p class="font-handwriting">No importa cuántos años pasen, siempre serás mi compañera favorita.</p>
+              <span>Por más recuerdos juntos</span>
+            </div>
+            <div class="envelope-pocket"></div>
+          </div>
+        </div>
+        <button onclick="toggleEnvelope('envelope-2', this)" class="btn-envelope">Abrir Carta</button>
+      </div>
+
+      <!-- Sobre 3 -->
+      <div class="envelope-card">
+        <div class="envelope-wrapper">
+          <div class="envelope" id="envelope-3">
+            <div class="envelope-flap"></div>
+            <div class="letter">
+              <p class="font-handwriting">Deseo que este año esté lleno de risas, éxitos y todos tus sueños cumplidos.</p>
+              <span>¡Te mereces lo mejor!</span>
+            </div>
+            <div class="envelope-pocket"></div>
+          </div>
+        </div>
+        <button onclick="toggleEnvelope('envelope-3', this)" class="btn-envelope">Abrir Carta</button>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="gallery-bg">
+    <section id="galeria" class="section">
+      <h2 class="section-title">Album Familiar</h2>
+      <p class="section-subtitle">Pasa las fotos una a una presionado el botón para descubrir cada anécdota.</p>
+
+      <div class="stack-container">
+        
+        <div class="photo-card-stacked" id="card-1">
+          <div class="photo-frame">
+            <img src="imagenes/1.jpeg" alt="Foto 1">
+          </div>
+          <h3>Salida familiar, Restaurante de alitas</h3>
+          <p>Fue un dia increible, las alitas y las salsas estaban deliciosas</p>
+        </div>
+
+        <div class="photo-card-stacked" id="card-2">
+          <div class="photo-frame">
+            <img src="imagenes/9.jpeg" alt="Foto 2">
+          </div>
+          <h3>Visita al Centro Cultural</h3>
+          <p>Me acuerdo que me quede dormido en la presentacion del video del universo</p>
+        </div>
+
+        <div class="photo-card-stacked" id="card-3">
+          <div class="photo-frame">
+            <img src="imagenes/3.jpeg" alt="Foto 3">
+          </div>
+          <h3>Fin de año</h3>
+          <p>Nos pintamos la cara y quemamos el viejo</p>
+        </div>
+
+        <div class="photo-card-stacked" id="card-4">
+          <div class="photo-frame">
+            <img src="imagenes/4.jpeg" alt="Foto 4">
+          </div>
+          <h3>Estreno de Michael</h3>
+          <p>Cada uno trato de imitar la vestimenta de Michael Jackson en alguno de sus videos musicales</p>
+        </div>
+
+        <div class="photo-card-stacked" id="card-5">
+          <div class="photo-frame">
+            <img src="imagenes/5.jpeg" alt="Foto 5">
+          </div>
+          <h3>Visita a la tienda Asiatica</h3>
+          <p>Ese dia compramos los colgantes de la suerte</p>
+        </div>
+
+        <div class="photo-card-stacked" id="card-6">
+          <div class="photo-frame">
+            <img src="imagenes/6.jpeg" alt="Foto 6">
+          </div>
+          <h3>Salida del estreno de Michael</h3>
+          <p>Aprovechamos para tomarnos varias fotos al salir de ver la pelicula</p>
+        </div>
+
+        <div class="photo-card-stacked" id="card-7">
+          <div class="photo-frame">
+            <img src="imagenes/7.jpeg" alt="Foto 7">
+          </div>
+          <h3>Cumpleaños de Cuak Verto</h3>
+          <p>Karol nos hizo posar como si fueramos Jack Black en Nacho libre</p>
+        </div>
+
+        <div class="photo-card-stacked" id="card-8">
+          <div class="photo-frame">
+            <img src="imagenes/8.jpeg" alt="Foto 8">
+          </div>
+          <h3>Visita al Centro Cultural, Retorno</h3>
+          <p>De regreso a caso nos tomamos unas fotos cerca a la casa de la cultura</p>
+        </div>
+
+      </div>
+
+      <div class="gallery-controls">
+        <button onclick="nextPhoto()" class="btn-next-photo">Siguiente Foto ➔</button>
+      </div>
+    </section>
+  </div>
+
+  <section id="sorpresa" class="section">
+    <div class="surprise-box">
+      <h2>¿Lista para tu sorpresa final?</h2>
+      <p>Presiona el botón para celebrar y desplegar tu carta principal de cumpleaños.</p>
+      <button onclick="triggerSurprise()" class="btn-surprise">✨ ¡Celebrar y Leer Carta!</button>
+    </div>
+
+    <div id="final-letter" class="final-letter">
+      <h3 style="margin-bottom: 15px; color: #1e293b;">Para la mejor hermana del mundo ❤️</h3>
+      <div class="final-letter-content font-handwriting">
+        <p>Querida hija-hermana,</p>
+        <br>
+        <p>Hoy en tu cumpleaños queremos recordarte lo increíblemente afortunados que nos sentimos de compartir la vida contigo. Gracias por cada risa, cada consejo y por estar siempre presente en los momentos más importantes.</p>
+        <br>
+        <p>Deseamos con todo nuestros corazones que este nuevo año te traiga una inmensa felicidad, salud y la oportunidad de cumplir cada uno de tus sueños. ¡Nunca dejes de brillar!</p>
+        <br>
+        <p style="text-align: right; color: #f43f5e; font-weight: bold;">Con todo nuestro cariño ❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script Local -->
+  <script src="script.js"></script>
+  <!-- Audio de fondo -->
+<audio id="bg-music" loop preload="auto">
+    <source src="musica.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
